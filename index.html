@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Farha Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        color: #333;
+    }
+    header {
+        text-align: center;
+        padding: 20px;
+    }
+    header img {
+        max-width: 180px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    header h1 {
+        font-size: 2em;
+        margin-top: 10px;
+        font-weight: 600;
+        color: #b84d00;
+    }
+    header h1 span {
+        font-size: 1em;
+        margin-left: 10px;
+        font-weight: 400;
+        color: #b84d00;
+    }
+    h2 {
+        font-size: 1.8em;
+        margin: 20px;
+        color: #b84d00;
+        text-align: center;
+    }
+    .menu-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 0 20px 40px;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .menu-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .menu-card:hover {
+        transform: translateY(-5px);
+    }
+    .menu-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    .menu-card h3 {
+        font-size: 1.1em;
+        margin: 10px 0 5px;
+    }
+    .menu-card p {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+        color: #555;
+    }
+    footer {
+        background: #f2f2f2;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.95em;
+    }
+    footer a {
+        color: #b84d00;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpeg" alt="Al Farha Logo">
+    <h1>Al Farha <span>الفَرْحَة</span></h1>
+</header>
+
+<!-- Juices -->
+<h2>Juices / العصائر</h2>
+<div class="menu-section">
+    <div class="menu-card"><img src="juice1.jpeg" alt=""><h3>1. Lassi / لاسي</h3><p>5 / 8 / 10 AED</p></div>
+    <div class="menu-card"><img src="juice2.jpeg" alt=""><h3>2. Apple Juice / عصير تفاح</h3><p>6 / 10 / 12 AED</p></div>
+    <div class="menu-card"><img src="juice3.jpeg" alt=""><h3>3. Banana Juice / عصير موز</h3><p>4 / 6 / 8 AED</p></div>
+    <div class="menu-card"><img src="juice4.jpeg" alt=""><h3>4. Strawberry Juice / عصير فراولة</h3><p>6 / 10 / 12 AED</p></div>
+    <div class="menu-card"><img src="juice5.jpeg" alt=""><h3>5. Orange Juice / عصير برتقال</h3><p>6 / 10 / 12 AED</p></div>
+    <div class="menu-card"><img src="juice6.jpeg" alt=""><h3>6. Mango Juice / عصير مانجو</h3><p>5 / 10 / 12 AED</p></div>
+    <div class="menu-card"><img src="juice7.jpeg" alt=""><h3>7. Carrot Juice / عصير جزر</h3><p>5 / 8 / 10 AED</p></div>
+    <div class="menu-card"><img src="juice8.jpeg" alt=""><h3>8. Avocado Juice / عصير أفوكادو</h3><p>6 / 10 / 12 AED</p></div>
+    <div class="menu-card"><img src="juice9.jpeg" alt=""><h3>9. Pineapple Juice / عصير أناناس</h3><p>5 / 8 / 10 AED</p></div>
+    <div class="menu-card"><img src="juice10.jpeg" alt=""><h3>10. Sweet Lemon Juice / عصير ليمون حلو</h3><p>5 / 8 / 10 AED</p></div>
+    <div class="menu-card"><img src="juice11.jpeg" alt=""><h3>11. Coconut Water / ماء جوز الهند</h3><p>12 AED</p></div>
+</div>
+
+<!-- Burgers & Sandwiches -->
+<h2>Burgers & Sandwiches / البرجر والسندويتشات</h2>
+<div class="menu-section">
+    <div class="menu-card"><img src="burger1.jpeg" alt=""><h3>12. Double Burger / برجر مزدوج</h3><p>13 AED</p></div>
+    <div class="menu-card"><img src="burger2.jpeg" alt=""><h3>13. Chicken Burger / برجر دجاج</h3><p>5 AED</p></div>
+    <div class="menu-card"><img src="burger3.jpeg" alt=""><h3>14. Chicken Burger with French Fries / برجر دجاج مع بطاطس مقلية</h3><p>7 AED</p></div>
+    <div class="menu-card"><img src="burger4.jpeg" alt=""><h3>15. Chicken Sandwich / ساندويتش دجاج</h3><p>5 AED</p></div>
+    <div class="menu-card"><img src="burger5.jpeg" alt=""><h3>16. Beef Sandwich / ساندويتش لحم بقري</h3><p>5 AED</p></div>
+    <div class="menu-card"><img src="burger6.jpeg" alt=""><h3>17. Vegetable Sandwich / ساندويتش خضار</h3><p>4 AED</p></div>
+</div>
+
+<!-- The rest of your menu continues here... -->
+
+<footer>
+    <div>📞 <a href="tel:+971987654321">+971 98 765 4321</a></div>
+    <div>📧 <a href="mailto:alfarha@example.com">alfarha@example.com</a></div>
+    <div>📸 <a href="https://instagram.com/yourpage" target="_blank">Instagram</a>  
+         💬 <a href="https://wa.me/971987654321" target="_blank">WhatsApp</a></div>
+    <div>📍 Al Farha Restaurant, UAE</div>
+    <p>© 2025 Al Farha</p>
+</footer>
+
+</body>
+</html>
