@@ -91,6 +91,8 @@
         object-fit:cover;
         background:#fff;
     }
+    .contain img{ object-fit:contain; height:190px; background:#fff; }
+
     .menu-body{
         padding:12px 14px 14px;
         display:flex;
@@ -121,8 +123,6 @@
         background:#fff;
         font-family:inherit;
         font-size:14px;
-        flex:1;
-        min-width:140px;
     }
     .checkbox{
         display:flex;
@@ -134,13 +134,12 @@
     }
     .checkbox input{ width:18px; height:18px; }
 
-    /* Floating WhatsApp order button */
     .wa-fab{
         position:fixed;
         right:18px;
         bottom:18px;
         padding:14px 18px;
-        background:#25D366; /* WhatsApp green */
+        background:#25D366;
         color:#fff;
         border:none;
         border-radius:999px;
@@ -159,7 +158,7 @@
     footer{
         background:#fff;
         text-align:center;
-        padding:28px 16px 80px; /* leave space for FAB */
+        padding:28px 16px 80px;
         margin-top:22px;
         color:var(--muted);
         border-top:1px solid #eee;
@@ -167,7 +166,6 @@
     footer a{ color:var(--brand); text-decoration:none; }
     footer a:hover{ text-decoration:underline; }
 
-    /* Small helper badges */
     .badge{
         display:inline-block;
         font-size:11px;
@@ -180,10 +178,6 @@
         vertical-align:middle;
     }
 
-    /* Make images “contain” if you prefer no cropping */
-    .contain img{ object-fit:contain; height:190px; background:#fff; }
-
-    /* Responsive tweaks */
     @media (max-width:520px){
         .menu-card img{ height:160px; }
         header{ padding-bottom:10px;}
@@ -198,142 +192,1126 @@
     <p class="sub">Fresh • Tasty • Made with love</p>
 </header>
 
-<!-- ============== Dosa Items (101–108) ============== -->
+
 <h2>Dosa Items</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="101"><img src="masaladosaneww.png" alt="Masala Dosa"><div class="menu-body"><h3 class="title">101. Masala Dosa</h3><p class="price">6 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="101. Masala Dosa - 6 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="102"><img src="WhatsApp Image 2025-08-13 at 10.21.44 PM.jpeg" alt="Plain Dosa"><div class="menu-body"><h3 class="title">102. Plain Dosa</h3><p class="price">5 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="102. Plain Dosa - 5 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="103"><img src="setdosanew.jpeg" alt="Set Dosa"><div class="menu-body"><h3 class="title">103. Set Dosa</h3><p class="price">5 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="103. Set Dosa - 5 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="104"><img src="WhatsApp Image 2025-08-13 at 10.21.45 PM (1).jpeg" alt="Onion Dosa"><div class="menu-body"><h3 class="title">104. Onion Dosa</h3><p class="price">6 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="104. Onion Dosa - 6 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="105"><img src="IMG_20250817_120708.jpg" alt="Uthappam"><div class="menu-body"><h3 class="title">105. Uthappam</h3><p class="price">7 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="105. Uthappam - 7 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="106"><img src="WhatsApp Image 2025-08-13 at 10.21.46 PM.jpeg" alt="Ghee Roast"><div class="menu-body"><h3 class="title">106. Ghee Roast</h3><p class="price">7 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="106. Ghee Roast - 7 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="107"><img src="puttu.jpg" alt="Puttu"><div class="menu-body"><h3 class="title">107. Puttu</h3><p class="price">6 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="107. Puttu - 6 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="108"><img src="poori.jpg" alt="Poori"><div class="menu-body"><h3 class="title">108. Poori</h3><p class="price">6 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="108. Poori - 6 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="101">
+      <img src="masaladosaneww.png" alt="Masala Dosa">
+      <div class="menu-body">
+        <h3 class="title">101. Masala Dosa </h3>
+        <p class="price">6 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="101. Masala Dosa - 6 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="102">
+      <img src="WhatsApp Image 2025-08-13 at 10.21.44 PM.jpeg" alt="Plain Dosa">
+      <div class="menu-body">
+        <h3 class="title">102. Plain Dosa </h3>
+        <p class="price">5 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="102. Plain Dosa - 5 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="103">
+      <img src="setdosanew.jpeg" alt="Set Dosa">
+      <div class="menu-body">
+        <h3 class="title">103. Set Dosa </h3>
+        <p class="price">5 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="103. Set Dosa - 5 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="104">
+      <img src="WhatsApp Image 2025-08-13 at 10.21.45 PM (1).jpeg" alt="Onion Dosa">
+      <div class="menu-body">
+        <h3 class="title">104. Onion Dosa </h3>
+        <p class="price">6 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="104. Onion Dosa - 6 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="105">
+      <img src="IMG_20250817_120708.jpg" alt="Uthappam">
+      <div class="menu-body">
+        <h3 class="title">105. Uthappam </h3>
+        <p class="price">7 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="105. Uthappam - 7 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="106">
+      <img src="WhatsApp Image 2025-08-13 at 10.21.46 PM.jpeg" alt="Ghee Roast">
+      <div class="menu-body">
+        <h3 class="title">106. Ghee Roast </h3>
+        <p class="price">7 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="106. Ghee Roast - 7 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="107">
+      <img src="puttu.jpg" alt="Puttu">
+      <div class="menu-body">
+        <h3 class="title">107. Puttu </h3>
+        <p class="price">6 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="107. Puttu - 6 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="108">
+      <img src="poori.jpg" alt="Poori">
+      <div class="menu-body">
+        <h3 class="title">108. Poori </h3>
+        <p class="price">6 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="108. Poori - 6 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Porotta (109) ============== -->
 <h2>Porotta</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="109"><img src="poratta.jpeg" alt="Porotta (1 pc)"><div class="menu-body"><h3 class="title">109. Porotta (1 pc)</h3><p class="price">1 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="109. Porotta (1 pc) - 1 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="109">
+      <img src="poratta.jpeg" alt="Porotta (1 pc)">
+      <div class="menu-body">
+        <h3 class="title">109. Porotta (1 pc) </h3>
+        <p class="price">1 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="109. Porotta (1 pc) - 1 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Chappati (110) ============== -->
 <h2>Chappati</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="110"><img src="18.jpeg" alt="Chappati (1 pc)"><div class="menu-body"><h3 class="title">110. Chappati (1 pc)</h3><p class="price">1 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="110. Chappati (1 pc) - 1 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="110">
+      <img src="18.jpeg" alt="Chappati (1 pc)">
+      <div class="menu-body">
+        <h3 class="title">110. Chappati (1 pc) </h3>
+        <p class="price">1 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="110. Chappati (1 pc) - 1 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Biryani (111–112) ============== -->
 <h2>Biryani</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="111"><img src="WhatsApp Image 2025-08-18 at 9.25.33 PM.jpeg" alt="Chicken Biryani"><div class="menu-body"><h3 class="title">111. Chicken Biryani</h3><p class="price">12 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="111. Chicken Biryani - 12 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="112"><img src="11.jpeg" alt="Beef Biryani"><div class="menu-body"><h3 class="title">112. Beef Biryani</h3><p class="price">12 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="112. Beef Biryani - 12 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="111">
+      <img src="WhatsApp Image 2025-08-18 at 9.25.33 PM.jpeg" alt="Chicken Biryani">
+      <div class="menu-body">
+        <h3 class="title">111. Chicken Biryani </h3>
+        <p class="price">12 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="111. Chicken Biryani - 12 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="112">
+      <img src="11.jpeg" alt="Beef Biryani">
+      <div class="menu-body">
+        <h3 class="title">112. Beef Biryani </h3>
+        <p class="price">12 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="112. Beef Biryani - 12 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Chicken (113–118) ============== -->
 <h2>Chicken</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="113"><img src="7.jpeg" alt="Chicken 65"><div class="menu-body"><h3 class="title">113. Chicken 65</h3><p class="price">10 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="113. Chicken 65 - 10 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="114"><img src="WhatsApp Image 2025-08-13 at 8.12.31 PM.jpeg" alt="Chilli Chicken"><div class="menu-body"><h3 class="title">114. Chilli Chicken</h3><p class="price">10 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="114. Chilli Chicken - 10 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="115"><img src="9.jpeg" alt="Chicken Kondattam"><div class="menu-body"><h3 class="title">115. Chicken Kondattam</h3><p class="price">12 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="115. Chicken Kondattam - 12 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="116"><img src="25.jpeg" alt="Chicken Curry"><div class="menu-body"><h3 class="title">116. Chicken Curry <span class="badge">Choose size</span></h3><p class="price">7 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="116. Chicken Curry - Small - 7 د.إ">Small - 7 د.إ</option><option value="116. Chicken Curry - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="117"><img src="28.jpeg" alt="Butter Chicken"><div class="menu-body"><h3 class="title">117. Butter Chicken</h3><p class="price">14 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="117. Butter Chicken - 14 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="118"><img src="alfahamnew.jpeg" alt="Charcoal Chicken"><div class="menu-body"><h3 class="title">118. Charcoal Chicken <span class="badge">Quarter/Half/Full</span></h3><p class="price">12 / 18 / 34 د.إ</p><div class="controls"><select class="price-option"><option value="118. Charcoal Chicken - Quarter - 12 د.إ">Quarter - 12 د.إ</option><option value="118. Charcoal Chicken - Half - 18 د.إ">Half - 18 د.إ</option><option value="118. Charcoal Chicken - Full - 34 د.إ">Full - 34 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="113">
+      <img src="7.jpeg" alt="Chicken 65">
+      <div class="menu-body">
+        <h3 class="title">113. Chicken 65 </h3>
+        <p class="price">10 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="113. Chicken 65 - 10 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="114">
+      <img src="WhatsApp Image 2025-08-13 at 8.12.31 PM.jpeg" alt="Chilli Chicken">
+      <div class="menu-body">
+        <h3 class="title">114. Chilli Chicken </h3>
+        <p class="price">10 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="114. Chilli Chicken - 10 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="115">
+      <img src="9.jpeg" alt="Chicken Kondattam">
+      <div class="menu-body">
+        <h3 class="title">115. Chicken Kondattam </h3>
+        <p class="price">12 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="115. Chicken Kondattam - 12 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="116">
+      <img src="25.jpeg" alt="Chicken Curry">
+      <div class="menu-body">
+        <h3 class="title">116. Chicken Curry <span class="badge">Choose size</span></h3>
+        <p class="price">7 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="116. Chicken Curry - Small - 7 د.إ">Small - 7 د.إ</option>
+            <option value="116. Chicken Curry - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="117">
+      <img src="28.jpeg" alt="Butter Chicken">
+      <div class="menu-body">
+        <h3 class="title">117. Butter Chicken </h3>
+        <p class="price">14 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="117. Butter Chicken - 14 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="118">
+      <img src="alfahamnew.jpeg" alt="Charcoal Chicken">
+      <div class="menu-body">
+        <h3 class="title">118. Charcoal Chicken <span class="badge">Quarter/Half/Full</span></h3>
+        <p class="price">12 د.إ / 18 د.إ / 34 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="118. Charcoal Chicken - Quarter - 12 د.إ">Quarter - 12 د.إ</option>
+            <option value="118. Charcoal Chicken - Half - 18 د.إ">Half - 18 د.إ</option>
+            <option value="118. Charcoal Chicken - Full - 34 د.إ">Full - 34 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Veg Curry (119–120) ============== -->
 <h2>Veg Curry</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="119"><img src="WhatsApp Image 2025-08-19 at 4.49.57 PM.jpeg" alt="Mix Veg Curry"><div class="menu-body"><h3 class="title">119. Mix Veg Curry <span class="badge">Choose size</span></h3><p class="price">4 / 6 د.إ</p><div class="controls"><select class="price-option"><option value="119. Mix Veg Curry - Small - 4 د.إ">Small - 4 د.إ</option><option value="119. Mix Veg Curry - Large - 6 د.إ">Large - 6 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="120"><img src="WhatsApp Image 2025-08-19 at 4.51.48 PM.jpeg" alt="Kadala Curry"><div class="menu-body"><h3 class="title">120. Kadala Curry <span class="badge">Choose size</span></h3><p class="price">4 / 6 د.إ</p><div class="controls"><select class="price-option"><option value="120. Kadala Curry - Small - 4 د.إ">Small - 4 د.إ</option><option value="120. Kadala Curry - Large - 6 د.إ">Large - 6 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="119">
+      <img src="WhatsApp Image 2025-08-19 at 4.49.57 PM.jpeg" alt="Mix Veg Curry">
+      <div class="menu-body">
+        <h3 class="title">119. Mix Veg Curry <span class="badge">Choose size</span></h3>
+        <p class="price">4 د.إ / 6 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="119. Mix Veg Curry - Small - 4 د.إ">Small - 4 د.إ</option>
+            <option value="119. Mix Veg Curry - Large - 6 د.إ">Large - 6 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="120">
+      <img src="WhatsApp Image 2025-08-19 at 4.51.48 PM.jpeg" alt="Kadala Curry">
+      <div class="menu-body">
+        <h3 class="title">120. Kadala Curry <span class="badge">Choose size</span></h3>
+        <p class="price">4 د.إ / 6 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="120. Kadala Curry - Small - 4 د.إ">Small - 4 د.إ</option>
+            <option value="120. Kadala Curry - Large - 6 د.إ">Large - 6 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Beef (121–122) ============== -->
 <h2>Beef</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="121"><img src="beefdryfry.png" alt="Beef Dry Fry"><div class="menu-body"><h3 class="title">121. Beef Dry Fry</h3><p class="price">10 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="121. Beef Dry Fry - 10 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="122"><img src="Screenshot_2025-08-23-19-26-07-47.png" alt="Beef Curry"><div class="menu-body"><h3 class="title">122. Beef Curry <span class="badge">Choose size</span></h3><p class="price">7 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="122. Beef Curry - Small - 7 د.إ">Small - 7 د.إ</option><option value="122. Beef Curry - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="121">
+      <img src="beefdryfry.png" alt="Beef Dry Fry">
+      <div class="menu-body">
+        <h3 class="title">121. Beef Dry Fry </h3>
+        <p class="price">10 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="121. Beef Dry Fry - 10 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="122">
+      <img src="Screenshot_2025-08-23-19-26-07-47.png" alt="Beef Curry">
+      <div class="menu-body">
+        <h3 class="title">122. Beef Curry <span class="badge">Choose size</span></h3>
+        <p class="price">7 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="122. Beef Curry - Small - 7 د.إ">Small - 7 د.إ</option>
+            <option value="122. Beef Curry - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Fish (123) ============== -->
 <h2>Fish</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="123"><img src="6.jpeg" alt="Fish Fry"><div class="menu-body"><h3 class="title">123. Fish Fry <span class="badge">Choose size</span></h3><p class="price">7 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="123. Fish Fry - Small - 7 د.إ">Small - 7 د.إ</option><option value="123. Fish Fry - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="123">
+      <img src="6.jpeg" alt="Fish Fry">
+      <div class="menu-body">
+        <h3 class="title">123. Fish Fry </h3>
+        <p class="price">7 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="123. Fish Fry - Small - 7 د.إ">Small - 7 د.إ</option>
+            <option value="123. Fish Fry - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Burgers & Sandwiches (124–130) ============== -->
 <h2>Burgers & Sandwiches</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="124"><img src="WhatsApp Image 2025-08-13 at 10.49.49 PM.jpeg" alt="Double Burger"><div class="menu-body"><h3 class="title">124. Double Burger</h3><p class="price">13 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="124. Double Burger - 13 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="125"><img src="WhatsApp Image 2025-08-13 at 10.49.48 PM.jpeg" alt="Chicken Burger"><div class="menu-body"><h3 class="title">125. Chicken Burger</h3><p class="price">5 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="125. Chicken Burger - 5 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="126"><img src="WhatsApp Image 2025-08-13 at 10.49.47 PM.jpeg" alt="Chicken Burger with French Fries"><div class="menu-body"><h3 class="title">126. Chicken Burger with French Fries</h3><p class="price">7 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="126. Chicken Burger with French Fries - 7 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="127"><img src="henrollnew.jpeg" alt="Chicken Sandwich (1 Pcs)"><div class="menu-body"><h3 class="title">127. Chicken Sandwich (1 Pcs)</h3><p class="price">5 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="127. Chicken Sandwich (1 Pcs) - 5 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="128"><img src="chickensandwich.jpeg" alt="Beef Sandwich"><div class="menu-body"><h3 class="title">128. Beef Sandwich</h3><p class="price">5 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="128. Beef Sandwich - 5 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="129"><img src="specialnew.jpeg" alt="Poratta Egg Roll"><div class="menu-body"><h3 class="title">129. Poratta Egg Roll</h3><p class="price">4 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="129. Poratta Egg Roll - 4 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="130"><img src="WhatsApp Image 2025-08-18 at 9.24.06 PM.jpeg" alt="Veg Club Sandwich"><div class="menu-body"><h3 class="title">130. Veg Club Sandwich</h3><p class="price">6 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="130. Veg Club Sandwich - 6 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="124">
+      <img src="WhatsApp Image 2025-08-13 at 10.49.49 PM.jpeg" alt="Double Burger">
+      <div class="menu-body">
+        <h3 class="title">124. Double Burger </h3>
+        <p class="price">13 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="124. Double Burger - 13 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="125">
+      <img src="WhatsApp Image 2025-08-13 at 10.49.48 PM.jpeg" alt="Chicken Burger">
+      <div class="menu-body">
+        <h3 class="title">125. Chicken Burger </h3>
+        <p class="price">5 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="125. Chicken Burger - 5 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="126">
+      <img src="WhatsApp Image 2025-08-13 at 10.49.47 PM.jpeg" alt="Chicken Burger with French Fries">
+      <div class="menu-body">
+        <h3 class="title">126. Chicken Burger with French Fries </h3>
+        <p class="price">7 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="126. Chicken Burger with French Fries - 7 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="127">
+      <img src="henrollnew.jpeg" alt="Chicken Sandwich (1 Pcs)">
+      <div class="menu-body">
+        <h3 class="title">127. Chicken Sandwich (1 Pcs) </h3>
+        <p class="price">5 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="127. Chicken Sandwich (1 Pcs) - 5 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="128">
+      <img src="chickensandwich.jpeg" alt="Beef Sandwich">
+      <div class="menu-body">
+        <h3 class="title">128. Beef Sandwich </h3>
+        <p class="price">5 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="128. Beef Sandwich - 5 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="129">
+      <img src="specialnew.jpeg" alt="Poratta Egg Roll">
+      <div class="menu-body">
+        <h3 class="title">129. Poratta Egg Roll </h3>
+        <p class="price">4 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="129. Poratta Egg Roll - 4 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="130">
+      <img src="WhatsApp Image 2025-08-18 at 9.24.06 PM.jpeg" alt="Veg Club Sandwich">
+      <div class="menu-body">
+        <h3 class="title">130. Veg Club Sandwich </h3>
+        <p class="price">6 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="130. Veg Club Sandwich - 6 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Juices (131–141) ============== -->
 <h2>Juices</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="131"><img src="WhatsApp Image 2025-08-13 at 10.57.03 PM (1).jpeg" alt="Lassi"><div class="menu-body"><h3 class="title">131. Lassi <span class="badge">S/M/L</span></h3><p class="price">5 / 8 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="131. Lassi - Small - 5 د.إ">Small - 5 د.إ</option><option value="131. Lassi - Medium - 8 د.إ">Medium - 8 د.إ</option><option value="131. Lassi - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="132"><img src="WhatsApp Image 2025-08-13 at 11.00.33 PM.jpeg" alt="Apple Juice"><div class="menu-body"><h3 class="title">132. Apple Juice <span class="badge">S/M/L</span></h3><p class="price">6 / 10 / 12 د.إ</p><div class="controls"><select class="price-option"><option value="132. Apple Juice - Small - 6 د.إ">Small - 6 د.إ</option><option value="132. Apple Juice - Medium - 10 د.إ">Medium - 10 د.إ</option><option value="132. Apple Juice - Large - 12 د.إ">Large - 12 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="133"><img src="WhatsApp Image 2025-08-13 at 11.05.16 PM.jpeg" alt="Banana Juice"><div class="menu-body"><h3 class="title">133. Banana Juice <span class="badge">S/M/L</span></h3><p class="price">4 / 6 / 8 د.إ</p><div class="controls"><select class="price-option"><option value="133. Banana Juice - Small - 4 د.إ">Small - 4 د.إ</option><option value="133. Banana Juice - Medium - 6 د.إ">Medium - 6 د.إ</option><option value="133. Banana Juice - Large - 8 د.إ">Large - 8 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="134"><img src="WhatsApp Image 2025-08-13 at 11.06.44 PM.jpeg" alt="Strawberry Juice"><div class="menu-body"><h3 class="title">134. Strawberry Juice <span class="badge">S/M/L</span></h3><p class="price">6 / 10 / 12 د.إ</p><div class="controls"><select class="price-option"><option value="134. Strawberry Juice - Small - 6 د.إ">Small - 6 د.إ</option><option value="134. Strawberry Juice - Medium - 10 د.إ">Medium - 10 د.إ</option><option value="134. Strawberry Juice - Large - 12 د.إ">Large - 12 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="135"><img src="WhatsApp Image 2025-08-13 at 11.01.06 PM.jpeg" alt="Orange Juice"><div class="menu-body"><h3 class="title">135. Orange Juice <span class="badge">S/M/L</span></h3><p class="price">6 / 10 / 12 د.إ</p><div class="controls"><select class="price-option"><option value="135. Orange Juice - Small - 6 د.إ">Small - 6 د.إ</option><option value="135. Orange Juice - Medium - 10 د.إ">Medium - 10 د.إ</option><option value="135. Orange Juice - Large - 12 د.إ">Large - 12 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="136"><img src="WhatsApp Image 2025-08-13 at 11.07.57 PM.jpeg" alt="Mango Juice"><div class="menu-body"><h3 class="title">136. Mango Juice <span class="badge">S/M/L</span></h3><p class="price">5 / 10 / 12 د.إ</p><div class="controls"><select class="price-option"><option value="136. Mango Juice - Small - 5 د.إ">Small - 5 د.إ</option><option value="136. Mango Juice - Medium - 10 د.إ">Medium - 10 د.إ</option><option value="136. Mango Juice - Large - 12 د.إ">Large - 12 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="137"><img src="WhatsApp Image 2025-08-13 at 11.11.05 PM.jpeg" alt="Carrot Juice"><div class="menu-body"><h3 class="title">137. Carrot Juice <span class="badge">S/M/L</span></h3><p class="price">5 / 8 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="137. Carrot Juice - Small - 5 د.إ">Small - 5 د.إ</option><option value="137. Carrot Juice - Medium - 8 د.إ">Medium - 8 د.إ</option><option value="137. Carrot Juice - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="138"><img src="WhatsApp Image 2025-08-13 at 11.10.51 PM.jpeg" alt="Avocado Juice"><div class="menu-body"><h3 class="title">138. Avocado Juice <span class="badge">S/M/L</span></h3><p class="price">6 / 10 / 12 د.إ</p><div class="controls"><select class="price-option"><option value="138. Avocado Juice - Small - 6 د.إ">Small - 6 د.إ</option><option value="138. Avocado Juice - Medium - 10 د.إ">Medium - 10 د.إ</option><option value="138. Avocado Juice - Large - 12 د.إ">Large - 12 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="139"><img src="WhatsApp Image 2025-08-13 at 11.13.10 PM.jpeg" alt="Pineapple Juice"><div class="menu-body"><h3 class="title">139. Pineapple Juice <span class="badge">S/M/L</span></h3><p class="price">5 / 8 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="139. Pineapple Juice - Small - 5 د.إ">Small - 5 د.إ</option><option value="139. Pineapple Juice - Medium - 8 د.إ">Medium - 8 د.إ</option><option value="139. Pineapple Juice - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="140"><img src="WhatsApp Image 2025-08-13 at 11.13.09 PM.jpeg" alt="Sweet Lemon Juice"><div class="menu-body"><h3 class="title">140. Sweet Lemon Juice <span class="badge">S/M/L</span></h3><p class="price">5 / 8 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="140. Sweet Lemon Juice - Small - 5 د.إ">Small - 5 د.إ</option><option value="140. Sweet Lemon Juice - Medium - 8 د.إ">Medium - 8 د.إ</option><option value="140. Sweet Lemon Juice - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="141"><img src="WhatsApp Image 2025-08-13 at 11.15.13 PM.jpeg" alt="Coconut"><div class="menu-body"><h3 class="title">141. Coconut</h3><p class="price">10 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="141. Coconut - 10 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="131">
+      <img src="WhatsApp Image 2025-08-13 at 10.57.03 PM (1).jpeg" alt="Lassi">
+      <div class="menu-body">
+        <h3 class="title">131. Lassi </h3>
+        <p class="price">5 د.إ / 8 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="131. Lassi - Small - 5 د.إ">Small - 5 د.إ</option>
+            <option value="131. Lassi - Medium - 8 د.إ">Medium - 8 د.إ</option>
+            <option value="131. Lassi - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="132">
+      <img src="WhatsApp Image 2025-08-13 at 11.00.33 PM.jpeg" alt="Apple Juice">
+      <div class="menu-body">
+        <h3 class="title">132. Apple Juice <span class="badge">Choose size</span></h3>
+        <p class="price">6 د.إ / 10 د.إ / 12 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="132. Apple Juice - Small - 6 د.إ">Small - 6 د.إ</option>
+            <option value="132. Apple Juice - Medium - 10 د.إ">Medium - 10 د.إ</option>
+            <option value="132. Apple Juice - Large - 12 د.إ">Large - 12 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="133">
+      <img src="WhatsApp Image 2025-08-13 at 11.05.16 PM.jpeg" alt="Banana Juice">
+      <div class="menu-body">
+        <h3 class="title">133. Banana Juice <span class="badge">Choose size</span></h3>
+        <p class="price">4 د.إ / 6 د.إ / 8 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="133. Banana Juice - Small - 4 د.إ">Small - 4 د.إ</option>
+            <option value="133. Banana Juice - Medium - 6 د.إ">Medium - 6 د.إ</option>
+            <option value="133. Banana Juice - Large - 8 د.إ">Large - 8 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="134">
+      <img src="WhatsApp Image 2025-08-13 at 11.06.44 PM.jpeg" alt="Strawberry Juice">
+      <div class="menu-body">
+        <h3 class="title">134. Strawberry Juice <span class="badge">Choose size</span></h3>
+        <p class="price">6 د.إ / 10 د.إ / 12 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="134. Strawberry Juice - Small - 6 د.إ">Small - 6 د.إ</option>
+            <option value="134. Strawberry Juice - Medium - 10 د.إ">Medium - 10 د.إ</option>
+            <option value="134. Strawberry Juice - Large - 12 د.إ">Large - 12 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="135">
+      <img src="WhatsApp Image 2025-08-13 at 11.01.06 PM.jpeg" alt="Orange Juice">
+      <div class="menu-body">
+        <h3 class="title">135. Orange Juice <span class="badge">Choose size</span></h3>
+        <p class="price">6 د.إ / 10 د.إ / 12 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="135. Orange Juice - Small - 6 د.إ">Small - 6 د.إ</option>
+            <option value="135. Orange Juice - Medium - 10 د.إ">Medium - 10 د.إ</option>
+            <option value="135. Orange Juice - Large - 12 د.إ">Large - 12 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="136">
+      <img src="WhatsApp Image 2025-08-13 at 11.07.57 PM.jpeg" alt="Mango Juice">
+      <div class="menu-body">
+        <h3 class="title">136. Mango Juice <span class="badge">Choose size</span></h3>
+        <p class="price">5 د.إ / 10 د.إ / 12 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="136. Mango Juice - Small - 5 د.إ">Small - 5 د.إ</option>
+            <option value="136. Mango Juice - Medium - 10 د.إ">Medium - 10 د.إ</option>
+            <option value="136. Mango Juice - Large - 12 د.إ">Large - 12 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="137">
+      <img src="WhatsApp Image 2025-08-13 at 11.11.05 PM.jpeg" alt="Carrot Juice">
+      <div class="menu-body">
+        <h3 class="title">137. Carrot Juice <span class="badge">Choose size</span></h3>
+        <p class="price">5 د.إ / 8 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="137. Carrot Juice - Small - 5 د.إ">Small - 5 د.إ</option>
+            <option value="137. Carrot Juice - Medium - 8 د.إ">Medium - 8 د.إ</option>
+            <option value="137. Carrot Juice - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="138">
+      <img src="WhatsApp Image 2025-08-13 at 11.10.51 PM.jpeg" alt="Avocado Juice">
+      <div class="menu-body">
+        <h3 class="title">138. Avocado Juice <span class="badge">Choose size</span></h3>
+        <p class="price">6 د.إ / 10 د.إ / 12 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="138. Avocado Juice - Small - 6 د.إ">Small - 6 د.إ</option>
+            <option value="138. Avocado Juice - Medium - 10 د.إ">Medium - 10 د.إ</option>
+            <option value="138. Avocado Juice - Large - 12 د.إ">Large - 12 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="139">
+      <img src="WhatsApp Image 2025-08-13 at 11.13.10 PM.jpeg" alt="Pineapple Juice">
+      <div class="menu-body">
+        <h3 class="title">139. Pineapple Juice <span class="badge">Choose size</span></h3>
+        <p class="price">5 د.إ / 8 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="139. Pineapple Juice - Small - 5 د.إ">Small - 5 د.إ</option>
+            <option value="139. Pineapple Juice - Medium - 8 د.إ">Medium - 8 د.إ</option>
+            <option value="139. Pineapple Juice - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="140">
+      <img src="WhatsApp Image 2025-08-13 at 11.13.09 PM.jpeg" alt="Sweet Lemon Juice">
+      <div class="menu-body">
+        <h3 class="title">140. Sweet Lemon Juice <span class="badge">Choose size</span></h3>
+        <p class="price">5 د.إ / 8 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="140. Sweet Lemon Juice - Small - 5 د.إ">Small - 5 د.إ</option>
+            <option value="140. Sweet Lemon Juice - Medium - 8 د.إ">Medium - 8 د.إ</option>
+            <option value="140. Sweet Lemon Juice - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="141">
+      <img src="WhatsApp Image 2025-08-13 at 11.15.13 PM.jpeg" alt="Coconut">
+      <div class="menu-body">
+        <h3 class="title">141. Coconut </h3>
+        <p class="price">10 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="141. Coconut - 10 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Tea (142–143) ============== -->
 <h2>Tea</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="142"><img src="1.jpeg" alt="Fresh Tea"><div class="menu-body"><h3 class="title">142. Fresh Tea</h3><p class="price">2 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="142. Fresh Tea - 2 د.إ"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="143"><img src="Kesar Masala Chai is the perfect blend of spices….jpg" alt="Karka Tea"><div class="menu-body"><h3 class="title">143. Karka Tea <span class="badge">Choose size</span></h3><p class="price">1 / 2 د.إ</p><div class="controls"><select class="price-option"><option value="143. Karka Tea - Small - 1 د.إ">Small - 1 د.إ</option><option value="143. Karka Tea - Large - 2 د.إ">Large - 2 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="142">
+      <img src="1.jpeg" alt="Fresh Tea">
+      <div class="menu-body">
+        <h3 class="title">142. Fresh Tea </h3>
+        <p class="price">2 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="142. Fresh Tea - 2 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="143">
+      <img src="Kesar Masala Chai is the perfect blend of spices….jpg" alt="Karka Tea">
+      <div class="menu-body">
+        <h3 class="title">143. Karka Tea <span class="badge">Choose size</span></h3>
+        <p class="price">1 د.إ / 2 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="143. Karka Tea - Small - 1 د.إ">Small - 1 د.إ</option>
+            <option value="143. Karka Tea - Large - 2 د.إ">Large - 2 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
-<!-- ============== Al Farha Special (144–145) ============== -->
 <h2>Al Farha Special</h2>
 <div class="menu-section contain">
-    <div class="menu-card" data-item-number="144"><img src="avilmilk.jpeg" alt="Avil Milk"><div class="menu-body"><h3 class="title">144. Avil Milk <span class="badge">Choose size</span></h3><p class="price">7 / 10 د.إ</p><div class="controls"><select class="price-option"><option value="144. Avil Milk - Small - 7 د.إ">Small - 7 د.إ</option><option value="144. Avil Milk - Large - 10 د.إ">Large - 10 د.إ</option></select><label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label></div></div></div>
-
-    <div class="menu-card" data-item-number="145"><img src="spbeef.png" alt="Special Sandwich"><div class="menu-body"><h3 class="title">145. Special Sandwich</h3><p class="price">7 د.إ</p><div class="controls"><label class="checkbox"><input class="add-to-order" type="checkbox" value="145. Special Sandwich - 7 د.إ"> Add</label></div></div></div>
+    <div class="menu-card contain" data-item-number="144">
+      <img src="avilmilk.jpeg" alt="Avil Milk">
+      <div class="menu-body">
+        <h3 class="title">144. Avil Milk <span class="badge">Choose size</span></h3>
+        <p class="price">7 د.إ / 10 د.إ</p>
+        <div class="controls">
+          <select class="price-option">
+            <option value="144. Avil Milk - Small - 7 د.إ">Small - 7 د.إ</option>
+            <option value="144. Avil Milk - Large - 10 د.إ">Large - 10 د.إ</option>
+          </select>
+          <label class="checkbox"><input class="add-to-order" type="checkbox"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="menu-card contain" data-item-number="145">
+      <img src="spbeef.png" alt="Special Sandwich">
+      <div class="menu-body">
+        <h3 class="title">145. Special Sandwich </h3>
+        <p class="price">7 د.إ</p>
+        <div class="controls">
+          <label class="checkbox"><input class="add-to-order" type="checkbox" value="145. Special Sandwich - 7 د.إ"> Add</label>
+          <select class="qty-select" aria-label="Quantity">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+            <option value="8">8x</option>
+            <option value="9">9x</option>
+            <option value="10">10x</option>
+          </select>
+        </div>
+      </div>
+    </div>
 </div>
 
 <footer>
@@ -346,32 +1324,25 @@
     <p style="margin-top:12px;">© 2025 Al Farha</p>
 </footer>
 
-<!-- Floating WhatsApp Order Button -->
 <button class="wa-fab" onclick="placeOrder()" aria-label="Order on WhatsApp">
-    <!-- WhatsApp icon (inline SVG) -->
     <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M19.11 17.41c-.29-.14-1.69-.83-1.96-.92-.26-.1-.45-.14-.64.14-.19.29-.74.92-.91 1.11-.17.19-.34.22-.63.07-.29-.14-1.23-.45-2.34-1.44-.86-.76-1.44-1.69-1.61-1.98-.17-.29-.02-.45.12-.59.12-.12.29-.34.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.48-.17 0-.36-.02-.55-.02s-.5.07-.76.36c-.26.29-1 1-1 2.43 0 1.43 1.03 2.81 1.18 3 .14.19 2.03 3.1 4.92 4.24.69.3 1.23.48 1.65.62.69.22 1.31.19 1.81.12.55-.08 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33zM16.02 3.2c-7.1 0-12.86 5.76-12.86 12.86 0 2.26.6 4.49 1.74 6.45l-1.85 6.76 6.93-1.82c1.9 1.04 4.05 1.58 6.24 1.58h.01c7.1 0 12.86-5.76 12.86-12.86 0-3.44-1.34-6.67-3.78-9.1a12.812 12.812 0 0 0-9.16-3.87zm0 23.45h-.01a10.58 10.58 0 0 1-5.39-1.48l-.39-.23-4.11 1.08 1.1-4.02-.25-.41a10.61 10.61 0 0 1-1.6-5.63c0-5.85 4.76-10.61 10.61-10.61 2.83 0 5.49 1.1 7.49 3.1s3.1 4.66 3.1 7.49c0 5.85-4.76 10.62-10.61 10.62z"/></svg>
     Order on WhatsApp
 </button>
 
 <script>
-/*
-    WhatsApp ordering logic:
-    - For each selected card:
-        * If it has a <select.price-option>, use its current option value (already includes number, name, size, price).
-        * Else use the checkbox value (includes number, name, price).
-    - Message includes dish numbers exactly as shown in the menu (101, 102, ...).
-*/
 function placeOrder(){
     const cards = document.querySelectorAll('.menu-card');
     const selected = [];
     cards.forEach(card=>{
         const cb = card.querySelector('.add-to-order');
         if(cb && cb.checked){
+            const qtySel = card.querySelector('.qty-select');
+            const qty = qtySel ? parseInt(qtySel.value,10) : 1;
             const sel = card.querySelector('select.price-option');
             if(sel){
-                selected.push(sel.value);
+                selected.push(sel.value + ' x ' + qty);
             }else{
-                selected.push(cb.value);
+                selected.push(cb.value + ' x ' + qty);
             }
         }
     });
@@ -386,19 +1357,16 @@ function placeOrder(){
     const footer = "\n\nThank you.";
     const msg = header + body + footer;
 
-    const phone = "971508672599"; // Your WhatsApp number
+    const phone = "971508672599";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
 }
 
-// Optional: keep checkbox value synced if someone changes the dropdown AFTER ticking
 document.addEventListener('change', function(e){
     if(e.target && e.target.matches('select.price-option')){
         const card = e.target.closest('.menu-card');
         const cb = card.querySelector('.add-to-order');
-        if(cb && cb.checked){
-            // no need to update cb.value because we read the select when ordering
-            // but this ensures clarity if you inspect the element
+        if(cb){
             cb.value = e.target.value;
         }
     }
