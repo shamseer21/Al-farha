@@ -148,6 +148,22 @@
         margin-bottom: 10px;
     }
     
+    .size-container {
+        margin: 10px 0;
+        display: none;
+    }
+    
+    .size-select {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 1em;
+        font-weight: 500;
+        background-color: white;
+        color: var(--dark);
+    }
+    
     .controls { 
         margin: 10px 0; 
         display: flex;
@@ -348,6 +364,12 @@
     .cart-item-name {
         font-weight: 600;
         margin-bottom: 5px;
+    }
+    
+    .cart-item-size {
+        font-size: 0.9em;
+        color: #777;
+        margin-bottom: 3px;
     }
     
     .cart-item-price {
@@ -570,6 +592,12 @@
   </div></div>
   <div class="menu-card"><img alt="" src="chickencurry@.jpg"/><div class="menu-card-content"><h3>017 - Chicken Curry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="7">Small - 7 د.إ</option>
+            <option value="10">Large - 10 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <div class="menu-card"><img alt="" src="butter@.jpg"/><div class="menu-card-content"><h3>018 - Butter Chicken</h3>
@@ -578,6 +606,13 @@
   </div></div>
   <div class="menu-card"><img alt="" src="charcoal@.jpg"/><div class="menu-card-content"><h3>019 - Charcoal Grilled Chicken</h3>
     <div class="price-container"><span class="price">12 د.إ / 18 د.إ / 34 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="12">Small - 12 د.إ</option>
+            <option value="18">Medium - 18 د.إ</option>
+            <option value="34">Large - 34 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
 </div>
@@ -587,10 +622,22 @@
 <div class="menu-section">
   <div class="menu-card"><img alt="" src="veg@.jpg"/><div class="menu-card-content"><h3>020 - Mix Veg Curry</h3>
     <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="4">Small - 4 د.إ</option>
+            <option value="6">Large - 6 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <div class="menu-card"><img alt="" src="kadala@.jpg"/><div class="menu-card-content"><h3>021 - Kadala Curry</h3>
     <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="4">Small - 4 د.إ</option>
+            <option value="6">Large - 6 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
 </div>
@@ -604,6 +651,12 @@
   </div></div>
   <div class="menu-card"><img alt="" src="beefcurry@.jpg"/><div class="menu-card-content"><h3>023 - Beef Curry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="7">Small - 7 د.إ</option>
+            <option value="10">Large - 10 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
 </div>
@@ -613,6 +666,12 @@
 <div class="menu-section">
   <div class="menu-card"><img alt="" src="fish@.jpg"/><div class="menu-card-content"><h3>024 - Fish Fry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="7">Small - 7 د.إ</option>
+            <option value="10">Large - 10 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
 </div>
@@ -657,6 +716,13 @@
         <div class="menu-card-content">
             <h3>032 - Lassi</h3>
             <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="5">Small - 5 د.إ</option>
+                    <option value="8">Medium - 8 د.إ</option>
+                    <option value="10">Large - 10 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -669,6 +735,13 @@
         <div class="menu-card-content">
             <h3>033 - Apple</h3>
             <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="6">Small - 6 د.إ</option>
+                    <option value="10">Medium - 10 د.إ</option>
+                    <option value="12">Large - 12 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -681,6 +754,13 @@
         <div class="menu-card-content">
             <h3>034 - Banana</h3>
             <div class="price-container"><span class="price">4 د.إ / 6 د.إ / 8 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="4">Small - 4 د.إ</option>
+                    <option value="6">Medium - 6 د.إ</option>
+                    <option value="8">Large - 8 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -693,6 +773,13 @@
         <div class="menu-card-content">
             <h3>035 - Strawberry</h3>
             <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="6">Small - 6 د.إ</option>
+                    <option value="10">Medium - 10 د.إ</option>
+                    <option value="12">Large - 12 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -705,6 +792,13 @@
         <div class="menu-card-content">
             <h3>036 - Orange</h3>
             <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="6">Small - 6 د.إ</option>
+                    <option value="10">Medium - 10 د.إ</option>
+                    <option value="12">Large - 12 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -717,6 +811,13 @@
         <div class="menu-card-content">
             <h3>037 - Mango</h3>
             <div class="price-container"><span class="price">5 د.إ / 10 د.إ / 12 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="5">Small - 5 د.إ</option>
+                    <option value="10">Medium - 10 د.إ</option>
+                    <option value="12">Large - 12 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -729,6 +830,13 @@
         <div class="menu-card-content">
             <h3>038 - Carrot</h3>
             <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="5">Small - 5 د.إ</option>
+                    <option value="8">Medium - 8 د.إ</option>
+                    <option value="10">Large - 10 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -741,6 +849,13 @@
         <div class="menu-card-content">
             <h3>039 - Avocado</h3>
             <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="6">Small - 6 د.إ</option>
+                    <option value="10">Medium - 10 د.إ</option>
+                    <option value="12">Large - 12 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -753,6 +868,13 @@
         <div class="menu-card-content">
             <h3>040 - Pineapple</h3>
             <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+            <div class="size-container">
+                <select class="size-select">
+                    <option value="5">Small - 5 د.إ</option>
+                    <option value="8">Medium - 8 د.إ</option>
+                    <option value="10">Large - 10 د.إ</option>
+                </select>
+            </div>
             <div class="controls">
                 <input class="qty" min="1" type="number" value="1"/>
                 <button onclick="addToCart(this)">➕ Add</button>
@@ -764,6 +886,13 @@
 
   <div class="menu-card"><img alt="" src="lemon@.jpg"/><div class="menu-card-content"><h3>41 - Sweet Lemon</h3>
     <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="5">Small - 5 د.إ</option>
+            <option value="8">Medium - 8 د.إ</option>
+            <option value="10">Large - 10 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <div class="menu-card"><img alt="" src="coconut@.jpg"/><div class="menu-card-content"><h3>42 - Coconut</h3>
@@ -781,6 +910,12 @@
   </div></div>
   <div class="menu-card"><img alt="" src="masalatea@.jpg"/><div class="menu-card-content"><h3>44 - Karka Tea</h3>
     <div class="price-container"><span class="price">1 د.إ / 2 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="1">Small - 1 د.إ</option>
+            <option value="2">Large - 2 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
 </div>
@@ -790,6 +925,12 @@
 <div class="menu-section">
   <div class="menu-card"><img alt="" src="avilmilk@.jpg"/><div class="menu-card-content"><h3>45 - Avil Milk</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="size-container">
+        <select class="size-select">
+            <option value="7">Small - 7 د.إ</option>
+            <option value="10">Large - 10 د.إ</option>
+        </select>
+    </div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <div class="menu-card"><img alt="" src="special@.jpg"/><div class="menu-card-content"><h3>46 - Special Sandwich</h3>
@@ -833,20 +974,45 @@
 <script>
 let cart = [];
 
+// Initialize size selectors for items with multiple prices
+function initSizeSelectors() {
+    document.querySelectorAll('.price-container').forEach(container => {
+        const priceText = container.querySelector('.price').textContent;
+        if (priceText.includes('/')) {
+            // Show size selector
+            const sizeContainer = container.nextElementSibling;
+            if (sizeContainer && sizeContainer.classList.contains('size-container')) {
+                sizeContainer.style.display = 'block';
+            }
+        }
+    });
+}
+
 function addToCart(btn) {
   const card = btn.closest('.menu-card');
   const id = card.querySelector('h3').innerText.split('-')[0].trim();
   const name = card.querySelector('h3').innerText.split('-').slice(1).join('-').trim();
-  const priceText = card.querySelector('.price').innerText;
-  // Extract the first price if multiple options exist
-  const price = parseFloat(priceText.split('د')[0].replace(/[^\d.]/g, '').trim());
+  
+  let price;
+  let sizeText = '';
+  
+  // Check if this item has a size selector
+  const sizeSelector = card.querySelector('.size-select');
+  if (sizeSelector) {
+    price = parseFloat(sizeSelector.value);
+    sizeText = sizeSelector.options[sizeSelector.selectedIndex].text.split('-')[0].trim();
+  } else {
+    const priceText = card.querySelector('.price').innerText;
+    price = parseFloat(priceText.split('د')[0].replace(/[^\d.]/g, '').trim());
+  }
+  
   const qty = parseInt(card.querySelector('.qty').value);
   
-  const existing = cart.find(item => item.id === id && item.name === name);
+  const existing = cart.find(item => item.id === id && item.name === name && item.size === sizeText);
   if (existing) { 
     existing.qty += qty; 
   } else { 
-    cart.push({id, name, price, qty}); 
+    cart.push({id, name, price, qty, size: sizeText}); 
   }
   
   updateCart();
@@ -878,9 +1044,16 @@ function updateCart() {
     
     const cartItemElement = document.createElement('div');
     cartItemElement.className = 'cart-item';
+    
+    let sizeHtml = '';
+    if (item.size) {
+        sizeHtml = `<div class="cart-item-size">Size: ${item.size}</div>`;
+    }
+    
     cartItemElement.innerHTML = `
       <div class="cart-item-info">
         <div class="cart-item-name">${item.id} - ${item.name}</div>
+        ${sizeHtml}
         <div class="cart-item-price">${item.price} د.إ each</div>
       </div>
       <div class="cart-item-controls">
@@ -938,7 +1111,12 @@ function sendWhatsApp() {
   
   let message = "Order from Al Farha:%0A%0A";
   cart.forEach(item => { 
-    message += `- ${item.id} - ${item.name} x${item.qty} = ${item.price * item.qty} د.إ%0A`; 
+    let itemText = `- ${item.id} - ${item.name}`;
+    if (item.size) {
+        itemText += ` (${item.size})`;
+    }
+    itemText += ` x${item.qty} = ${item.price * item.qty} د.إ%0A`;
+    message += itemText;
   });
   
   let total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
@@ -947,11 +1125,14 @@ function sendWhatsApp() {
   window.open("https://wa.me/971508672599?text=" + message, "_blank");
 }
 
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initSizeSelectors();
+    updateCart();
+});
+
 // Close cart when clicking outside
 document.getElementById('overlay').addEventListener('click', closeCart);
-
-// Initialize cart display
-updateCart();
 </script>
 </body>
 </html>
