@@ -5,7 +5,6 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Al Farha Menu</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     :root {
         --primary: #D35400;
@@ -16,7 +15,6 @@
         --dark: #333333;
         --shadow: 0 4px 12px rgba(0,0,0,0.1);
         --radius: 12px;
-        --error: #ff4757;
     }
     
     * {
@@ -34,21 +32,6 @@
         line-height: 1.6;
     }
     
-    .skip-link {
-        position: absolute;
-        top: -40px;
-        left: 0;
-        background: var(--secondary);
-        color: white;
-        padding: 8px;
-        z-index: 2000;
-        text-decoration: none;
-    }
-    
-    .skip-link:focus {
-        top: 0;
-    }
-    
     header { 
         text-align: center; 
         padding: 20px; 
@@ -57,7 +40,6 @@
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         box-shadow: var(--shadow);
-        position: relative;
     }
     
     header img { 
@@ -485,13 +467,11 @@
 </style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to main content</a>
 <header>
 <img alt="Al Farha Logo" src="logo.jpeg"/>
 <h1>Al Farha <span>الفَرْحَة</span></h1>
 </header>
 
-<main id="main-content">
 <!-- ✅ FULL MENU START -->
 <h2>Dosa Items</h2>
 <div class="menu-section">
@@ -501,42 +481,42 @@
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 002 - Masala Dosa -->
-  <div class="menu-card"><div class="placeholder-img">Masala Dosa Image</div><div class="menu-card-content"><h3>002 - Masala Dosa</h3>
+  <div class="menu-card"><img src="masaladosa@.jpg"/><div class="menu-card-content"><h3>002 - Masala Dosa</h3>
     <div class="price-container"><span class="price">6 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 003 - Plain Dosa -->
-  <div class="menu-card"><div class="placeholder-img">Plain Dosa Image</div><div class="menu-card-content"><h3>003 - Plain Dosa</h3>
+  <div class="menu-card"><img src="plain@.jpg"/><div class="menu-card-content"><h3>003 - Plain Dosa</h3>
     <div class="price-container"><span class="price">5 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 004 - Set Dosa -->
-  <div class="menu-card"><div class="placeholder-img">Set Dosa Image</div><div class="menu-card-content"><h3>004 - Set Dosa</h3>
+  <div class="menu-card"><img src="setdosa@.jpg"/><div class="menu-card-content"><h3>004 - Set Dosa</h3>
     <div class="price-container"><span class="price">5 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 005 - Onion Dosa -->
-  <div class="menu-card"><div class="placeholder-img">Onion Dosa Image</div><div class="menu-card-content"><h3>005 - Onion Dosa</h3>
+  <div class="menu-card"><img src="onion@.jpg"/><div class="menu-card-content"><h3>005 - Onion Dosa</h3>
     <div class="price-container"><span class="price">6 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 006 - uthappam -->
-  <div class="menu-card"><div class="placeholder-img">Uthappam Image</div><div class="menu-card-content"><h3>006 - Uthappam</h3>
+  <div class="menu-card"><img src="uthappam@.jpg"/><div class="menu-card-content"><h3>006 - Uthappam</h3>
     <div class="price-container"><span class="price">7 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 007 - Ghee roast -->
-  <div class="menu-card"><div class="placeholder-img">Ghee Roast Image</div><div class="menu-card-content"><h3>007 - Ghee Roast</h3>
+  <div class="menu-card"><img src="gheeroast@.jpg"/><div class="menu-card-content"><h3>007 - Ghee Roast</h3>
     <div class="price-container"><span class="price">7 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 008 - Puttu -->
-  <div class="menu-card"><div class="placeholder-img">Puttu Image</div><div class="menu-card-content"><h3>008 - Puttu</h3>
+  <div class="menu-card"><img src="puttu@.jpg"/><div class="menu-card-content"><h3>008 - Puttu</h3>
     <div class="price-container"><span class="price">6 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
   <!-- 009 - Poori -->
-  <div class="menu-card"><div class="placeholder-img">Poori Image</div><div class="menu-card-content"><h3>009 - Poori</h3>
+  <div class="menu-card"><img src="poori.jpg"/><div class="menu-card-content"><h3>009 - Poori</h3>
     <div class="price-container"><span class="price">6 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -545,7 +525,7 @@
 <!-- 010 Porotta -->
 <h2>Porotta</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Porotta Image</div><div class="menu-card-content"><h3>010 - Porotta (1 pc)</h3>
+  <div class="menu-card"><img src="poratta@.jpg"/><div class="menu-card-content"><h3>010 - Porotta (1 pc)</h3>
     <div class="price-container"><span class="price">1 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -554,7 +534,7 @@
 <!-- 011 Chappati -->
 <h2>Chappati</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Chappati Image</div><div class="menu-card-content"><h3>011 - Chappati (1 pc)</h3>
+  <div class="menu-card"><img src="chaplathi@.jpg"/><div class="menu-card-content"><h3>011 - Chappati (1 pc)</h3>
     <div class="price-container"><span class="price">1 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -563,11 +543,11 @@
 <!-- 012-013 Biryani -->
 <h2>Biryani</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Chicken Biryani Image</div><div class="menu-card-content"><h3>012 - Chicken Biryani</h3>
+  <div class="menu-card"><img src="biriyani@.jpg"/><div class="menu-card-content"><h3>012 - Chicken Biryani</h3>
     <div class="price-container"><span class="price">12 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Beef Biryani Image</div><div class="menu-card-content"><h3>013 - Beef Biryani</h3>
+  <div class="menu-card"><img src="beefbiriyani@.jpg"/><div class="menu-card-content"><h3>013 - Beef Biryani</h3>
     <div class="price-container"><span class="price">12 د.إ</span></div>
     <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -576,27 +556,27 @@
 <!-- Chicken -->
 <h2>Chicken</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Chicken 65 Image</div><div class="menu-card-content"><h3>014 - Chicken 65</h3>
+  <div class="menu-card"><img alt="" src="chicken65@.jpg"/><div class="menu-card-content"><h3>014 - Chicken 65</h3>
     <div class="price-container"><span class="price">10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chilli Chicken Image</div><div class="menu-card-content"><h3>015 - Chilli Chicken</h3>
+  <div class="menu-card"><img alt="" src="chilly@.jpg"/><div class="menu-card-content"><h3>015 - Chilli Chicken</h3>
     <div class="price-container"><span class="price">10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chicken Kondattam Image</div><div class="menu-card-content"><h3>016 - Chicken Kondattam</h3>
+  <div class="menu-card"><img alt="" src="chickenkomdattam@.jpg"/><div class="menu-card-content"><h3>016 - Chicken Kondattam</h3>
     <div class="price-container"><span class="price">12 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chicken Curry Image</div><div class="menu-card-content"><h3>017 - Chicken Curry</h3>
+  <div class="menu-card"><img alt="" src="chickencurry@.jpg"/><div class="menu-card-content"><h3>017 - Chicken Curry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Butter Chicken Image</div><div class="menu-card-content"><h3>018 - Butter Chicken</h3>
+  <div class="menu-card"><img alt="" src="butter@.jpg"/><div class="menu-card-content"><h3>018 - Butter Chicken</h3>
     <div class="price-container"><span class="price">14 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Charcoal Grilled Chicken Image</div><div class="menu-card-content"><h3>019 - Charcoal Grilled Chicken</h3>
+  <div class="menu-card"><img alt="" src="charcoal@.jpg"/><div class="menu-card-content"><h3>019 - Charcoal Grilled Chicken</h3>
     <div class="price-container"><span class="price">12 د.إ / 18 د.إ / 34 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -605,11 +585,11 @@
 <!-- Veg Curry -->
 <h2>Veg Curry</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Mix Veg Curry Image</div><div class="menu-card-content"><h3>020 - Mix Veg Curry</h3>
+  <div class="menu-card"><img alt="" src="veg@.jpg"/><div class="menu-card-content"><h3>020 - Mix Veg Curry</h3>
     <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Kadala Curry Image</div><div class="menu-card-content"><h3>021 - Kadala Curry</h3>
+  <div class="menu-card"><img alt="" src="kadala@.jpg"/><div class="menu-card-content"><h3>021 - Kadala Curry</h3>
     <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -618,11 +598,11 @@
 <!-- Beef -->
 <h2>Beef</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Beef Dry Fry Image</div><div class="menu-card-content"><h3>022 - Beef Dry Fry</h3>
+  <div class="menu-card"><img alt="" src="beeffry@.jpg"/><div class="menu-card-content"><h3>022 - Beef Dry Fry</h3>
     <div class="price-container"><span class="price">10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Beef Curry Image</div><div class="menu-card-content"><h3>023 - Beef Curry</h3>
+  <div class="menu-card"><img alt="" src="beefcurry@.jpg"/><div class="menu-card-content"><h3>023 - Beef Curry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -631,7 +611,7 @@
 <!-- Fish -->
 <h2>Fish</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Fish Fry Image</div><div class="menu-card-content"><h3>024 - Fish Fry</h3>
+  <div class="menu-card"><img alt="" src="fish@.jpg"/><div class="menu-card-content"><h3>024 - Fish Fry</h3>
     <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
@@ -640,23 +620,23 @@
 <!-- Burgers & Sandwiches -->
 <h2>Burgers &amp; Sandwiches</h2>
 <div class="menu-section">
-  <div class="menu-card"><div class="placeholder-img">Double Burger Image</div><div class="menu-card-content"><h3>025 - Double Burger</h3>
+  <div class="menu-card"><img alt="" src="doubleburger@.jpg"/><div class="menu-card-content"><h3>025 - Double Burger</h3>
     <div class="price-container"><span class="price">13 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chicken Burger Image</div><div class="menu-card-content"><h3>026 - Chicken Burger</h3>
+  <div class="menu-card"><img alt="" src="burger@.jpg"/><div class="menu-card-content"><h3>026 - Chicken Burger</h3>
     <div class="price-container"><span class="price">5 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chicken Burger with Fries Image</div><div class="menu-card-content"><h3>027 - Chicken Burger with French Fries</h3>
+  <div class="menu-card"><img alt="" src="burgewithpotato@.jpg"/><div class="menu-card-content"><h3>027 - Chicken Burger with French Fries</h3>
     <div class="price-container"><span class="price">7 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Chicken Sandwich Image</div><div class="menu-card-content"><h3>028 - Chicken Sandwich (1 Pcs)</h3>
+  <div class="menu-card"><img alt="" src="chickensand@.jpg"/><div class="menu-card-content"><h3>028 - Chicken Sandwich (1 Pcs)</h3>
     <div class="price-container"><span class="price">5 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
-  <div class="menu-card"><div class="placeholder-img">Beef Sandwich Image</div><div class="menu-card-content"><h3>029 - Beef Sandwich</h3>
+  <div class="menu-card"><img alt="" src="beefsand@.jpg"/><div class="menu-card-content"><h3>029 - Beef Sandwich</h3>
     <div class="price-container"><span class="price">5 د.إ</span></div>
     <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
   </div></div>
