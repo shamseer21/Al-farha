@@ -4,82 +4,454 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Al Farha Menu</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
+    :root {
+        --primary: #D35400;
+        --primary-light: #FF8C42;
+        --secondary: #2C3E50;
+        --accent: #27AE60;
+        --light: #F5F5F5;
+        --dark: #333333;
+        --shadow: 0 4px 12px rgba(0,0,0,0.1);
+        --radius: 12px;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
     body {
         font-family: 'Poppins', sans-serif;
-        margin: 0; padding: 0;
-        background-color: #ffffff; color: #333;
+        margin: 0; 
+        padding: 0;
+        background-color: #FAFAFA; 
+        color: var(--dark);
+        line-height: 1.6;
     }
-    header { text-align: center; padding: 20px; }
-    header img { max-width: 180px; height: auto; display: block; margin: auto; }
-    header h1 { font-size: 2em; margin-top: 10px; font-weight: 600; color: #b84d00; }
-    header h1 span { font-size: 1em; margin-left: 10px; font-weight: 400; color: #b84d00; }
-    h2 { font-size: 1.8em; margin: 20px; color: #b84d00; text-align: center; }
+    
+    header { 
+        text-align: center; 
+        padding: 20px; 
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+        color: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: var(--shadow);
+    }
+    
+    header img { 
+        max-width: 180px; 
+        height: auto; 
+        display: block; 
+        margin: 10px auto; 
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    }
+    
+    header h1 { 
+        font-size: 2.2em; 
+        margin-top: 10px; 
+        font-weight: 700; 
+        color: white;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    header h1 span { 
+        font-size: 0.9em; 
+        margin-left: 8px; 
+        font-weight: 400; 
+        color: rgba(255,255,255,0.9);
+    }
+    
+    h2 { 
+        font-size: 1.8em; 
+        margin: 25px 15px 15px; 
+        color: var(--secondary); 
+        text-align: center; 
+        position: relative;
+        padding-bottom: 10px;
+    }
+    
+    h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 2px;
+    }
+    
     .menu-section {
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px; padding: 0 20px 40px; max-width: 1000px; margin: auto;
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px; 
+        padding: 0 20px 40px; 
+        max-width: 1200px; 
+        margin: auto;
     }
+    
     .menu-card {
-        background: #fff; border-radius: 12px; overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
-        transition: transform 0.2s;
+        background: #fff; 
+        border-radius: var(--radius); 
+        overflow: hidden;
+        box-shadow: var(--shadow); 
+        text-align: center;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
-    .menu-card:hover { transform: translateY(-5px); }
-    .menu-card img { width: 100%; height: auto; object-fit: contain; background-color: #fff; }
-    .menu-card h3 { font-size: 1.1em; margin: 10px 0 5px; }
-    .controls { margin: 10px 0; }
-    .controls input { width: 60px; padding: 5px; margin-right: 5px; }
-    .controls button { padding: 5px 10px; cursor: pointer; }
-    footer { background: #f2f2f2; text-align: center; padding: 20px; font-size: 0.95em; }
-    footer a { color: #b84d00; text-decoration: none; margin: 0 5px; }
-    footer a:hover { text-decoration: underline; }
+    
+    .menu-card:hover { 
+        transform: translateY(-8px); 
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .menu-card img { 
+        width: 100%; 
+        height: 180px; 
+        object-fit: cover;
+        background-color: #f0f0f0;
+    }
+    
+    .menu-card-content {
+        padding: 15px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .menu-card h3 { 
+        font-size: 1.2em; 
+        margin: 10px 0; 
+        color: var(--secondary);
+        font-weight: 600;
+    }
+    
+    .price-container {
+        margin: 10px 0;
+    }
+    
+    .price {
+        font-size: 1.1em;
+        font-weight: 600;
+        color: var(--primary);
+        padding: 8px 15px;
+        background: rgba(211, 84, 0, 0.1);
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    
+    .controls { 
+        margin: 10px 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .qty {
+        width: 70px;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 1.1em;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    .controls button { 
+        padding: 12px 20px; 
+        cursor: pointer; 
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .controls button:hover {
+        background: var(--secondary);
+    }
+    
+    footer { 
+        background: var(--secondary); 
+        text-align: center; 
+        padding: 30px 20px; 
+        font-size: 0.95em; 
+        color: white;
+        margin-top: 40px;
+    }
+    
+    footer a { 
+        color: var(--primary-light); 
+        text-decoration: none; 
+        margin: 0 5px; 
+        transition: all 0.2s;
+    }
+    
+    footer a:hover { 
+        color: white;
+        text-decoration: underline; 
+    }
+    
+    footer div {
+        margin-bottom: 10px;
+    }
 
     /* Floating buttons */
     .floating-total {
-      position: fixed; top: 10px; left: 10px;
-      background: #111; color: #fff;
-      padding: 8px 12px; border-radius: 6px;
-      font-weight: bold; z-index: 1500;
+      position: fixed; 
+      top: 15px; 
+      left: 15px;
+      background: var(--secondary); 
+      color: white;
+      padding: 12px 18px; 
+      border-radius: 30px;
+      font-weight: bold; 
+      z-index: 1500;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 5px;
     }
+    
     .floating-cart {
-      position: fixed; top: 10px; right: 10px;
-      background: #b84d00; color: #fff;
-      border: none; padding: 8px 12px; border-radius: 6px;
-      cursor: pointer; z-index: 1500; font-size: 18px;
+      position: fixed; 
+      top: 15px; 
+      right: 15px;
+      background: var(--primary); 
+      color: white;
+      border: none; 
+      padding: 12px 18px; 
+      border-radius: 30px;
+      cursor: pointer; 
+      z-index: 1500; 
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow);
+      font-weight: 600;
     }
+    
     .floating-wa {
-      position: fixed; bottom: 15px; right: 15px;
-      background: #25D366; color: #fff;
-      border: none; padding: 10px 15px; border-radius: 25px;
-      cursor: pointer; z-index: 1500; font-size: 14px;
-      display: flex; align-items: center;
+      position: fixed; 
+      bottom: 20px; 
+      right: 20px;
+      background: #25D366; 
+      color: white;
+      border: none; 
+      padding: 14px 20px; 
+      border-radius: 30px;
+      cursor: pointer; 
+      z-index: 1500; 
+      font-size: 16px;
+      display: flex; 
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-weight: 600;
+      transition: all 0.2s;
     }
-    .floating-wa img { width: 20px; height: 20px; margin-right: 5px; }
+    
+    .floating-wa:hover {
+        transform: scale(1.05);
+    }
+    
+    .floating-wa img { 
+        width: 24px; 
+        height: 24px; 
+        margin-right: 8px; 
+    }
 
     /* Overlay */
     .overlay {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0;
       background: rgba(0,0,0,0.5);
-      display: none; z-index: 1400;
+      display: none; 
+      z-index: 1400;
     }
 
     /* Cart Drawer */
     .cart-drawer {
-      position: fixed; top: -100%; left: 0; right: 0;
-      height: 60%; background: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      transition: top 0.3s ease; z-index: 1600;
-      display: none; flex-direction: column;
+      position: fixed; 
+      top: 0;
+      right: -400px;
+      width: 380px;
+      height: 100%; 
+      background: #fff;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      transition: right 0.3s ease; 
+      z-index: 1600;
+      display: flex;
+      flex-direction: column;
     }
+    
+    .cart-drawer.open {
+        right: 0;
+    }
+    
     .cart-header {
-      padding: 15px; font-weight: bold; border-bottom: 1px solid #ccc;
-      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px; 
+      font-weight: bold; 
+      border-bottom: 1px solid #eee;
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      background: var(--secondary);
+      color: white;
+      font-size: 1.2em;
     }
-    .close-btn { background: none; border: none; font-size: 18px; cursor: pointer; }
-    .cart-items { flex: 1; overflow-y: auto; padding: 15px; }
-    .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-    .cart-footer { padding: 15px; border-top: 1px solid #ccc; font-weight: bold; }
+    
+    .close-btn { 
+        background: none; 
+        border: none; 
+        font-size: 1.5em; 
+        cursor: pointer; 
+        color: white;
+    }
+    
+    .cart-items { 
+        flex: 1; 
+        overflow-y: auto; 
+        padding: 20px;
+    }
+    
+    .cart-item { 
+        display: flex; 
+        justify-content: space-between; 
+        margin-bottom: 15px; 
+        border-bottom: 1px solid #eee; 
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    
+    .cart-item-info {
+        flex-grow: 1;
+    }
+    
+    .cart-item-name {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .cart-item-price {
+        color: var(--primary);
+        font-weight: 600;
+    }
+    
+    .cart-item-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .cart-item-qty {
+        width: 50px;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    
+    .cart-item-remove {
+        background: #ff4757;
+        color: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .cart-footer { 
+        padding: 20px; 
+        border-top: 1px solid #eee; 
+        font-weight: bold; 
+        background: #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .checkout-btn {
+        background: var(--accent);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 15px;
+        width: 100%;
+        transition: all 0.2s;
+    }
+    
+    .checkout-btn:hover {
+        background: #219653;
+    }
+    
+    .empty-cart {
+        text-align: center;
+        padding: 40px 20px;
+        color: #888;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .menu-section {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 15px 30px;
+        }
+        
+        .cart-drawer {
+            width: 320px;
+        }
+        
+        .floating-total, .floating-cart {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            font-size: 0.9em;
+        }
+        
+        h2 {
+            font-size: 1.6em;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .menu-section {
+            grid-template-columns: 1fr;
+        }
+        
+        .cart-drawer {
+            width: 100%;
+            right: -100%;
+        }
+        
+        header h1 {
+            font-size: 1.8em;
+        }
+    }
 </style>
 </head>
 <body>
@@ -92,314 +464,257 @@
 <h2>Dosa Items</h2>
 <div class="menu-section">
   <!-- 101 - Masala Dosa -->
-  <div class="menu-card"><img src="masaladosa@.jpg"/><h3>101 - Masala Dosa</h3>
-    <select class="price"><option value="6">6 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="masaladosa@.jpg"/><div class="menu-card-content"><h3>101 - Masala Dosa</h3>
+    <div class="price-container"><span class="price">6 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 102 - Plain Dosa -->
-  <div class="menu-card"><img src="plain@.jpg"/><h3>102 - Plain Dosa</h3>
-    <select class="price"><option value="5">5 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="plain@.jpg"/><div class="menu-card-content"><h3>102 - Plain Dosa</h3>
+    <div class="price-container"><span class="price">5 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 103 - Set Dosa -->
-  <div class="menu-card"><img src="setdosa@.jpg"/><h3>103 - Set Dosa</h3>
-    <select class="price"><option value="5">5 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="setdosa@.jpg"/><div class="menu-card-content"><h3>103 - Set Dosa</h3>
+    <div class="price-container"><span class="price">5 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 104 - Onion Dosa -->
-  <div class="menu-card"><img src="onion@.jpg"/><h3>104 - Onion Dosa</h3>
-    <select class="price"><option value="6">6 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="onion@.jpg"/><div class="menu-card-content"><h3>104 - Onion Dosa</h3>
+    <div class="price-container"><span class="price">6 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 105 - uthappam -->
-  <div class="menu-card"><img src="uthappam@.jpg"/><h3>105 - uthappam</h3>
-    <select class="price"><option value="7">7 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="uthappam@.jpg"/><div class="menu-card-content"><h3>105 - Uthappam</h3>
+    <div class="price-container"><span class="price">7 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 106 - Ghee roast -->
-  <div class="menu-card"><img src="gheeroast@.jpg"/><h3>106 - Ghee roast</h3>
-    <select class="price"><option value="7">7 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="gheeroast@.jpg"/><div class="menu-card-content"><h3>106 - Ghee Roast</h3>
+    <div class="price-container"><span class="price">7 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 107 - Puttu -->
-  <div class="menu-card"><img src="puttu@.jpg"/><h3>107 - Puttu</h3>
-    <select class="price"><option value="6">6 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="puttu@.jpg"/><div class="menu-card-content"><h3>107 - Puttu</h3>
+    <div class="price-container"><span class="price">6 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
   <!-- 108 - Poori -->
-  <div class="menu-card"><img src="poori.jpg"/><h3>108 - Poori</h3>
-    <select class="price"><option value="6">6 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="poori.jpg"/><div class="menu-card-content"><h3>108 - Poori</h3>
+    <div class="price-container"><span class="price">6 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
 <!-- 109 Porotta -->
 <h2>Porotta</h2>
 <div class="menu-section">
-  <div class="menu-card"><img src="poratta@.jpg"/><h3>109 - Porotta (1 pc)</h3>
-    <select class="price"><option value="1">1 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="poratta@.jpg"/><div class="menu-card-content"><h3>109 - Porotta (1 pc)</h3>
+    <div class="price-container"><span class="price">1 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
 <!-- 110 Chappati -->
 <h2>Chappati</h2>
 <div class="menu-section">
-  <div class="menu-card"><img src="chaplathi@.jpg"/><h3>110 - Chappati (1 pc)</h3>
-    <select class="price"><option value="1">1 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="chaplathi@.jpg"/><div class="menu-card-content"><h3>110 - Chappati (1 pc)</h3>
+    <div class="price-container"><span class="price">1 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
 <!-- 111-112 Biryani -->
 <h2>Biryani</h2>
 <div class="menu-section">
-  <div class="menu-card"><img src="biriyani@.jpg"/><h3>111 - Chicken Biryani</h3>
-    <select class="price"><option value="12">12 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
-  <div class="menu-card"><img src="beefbiriyani@.jpg"/><h3>112 - Beef Biryani</h3>
-    <select class="price"><option value="12">12 د.إ</option></select>
-    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">Add</button></div>
-  </div>
+  <div class="menu-card"><img src="biriyani@.jpg"/><div class="menu-card-content"><h3>111 - Chicken Biryani</h3>
+    <div class="price-container"><span class="price">12 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img src="beefbiriyani@.jpg"/><div class="menu-card-content"><h3>112 - Beef Biryani</h3>
+    <div class="price-container"><span class="price">12 د.إ</span></div>
+    <div class="controls"><input class="qty" type="number" min="1" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
-!-- . Chicken -->
+<!-- Chicken -->
 <h2>Chicken</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="chicken65@.jpg"/><h3>113 - Chicken 65</h3><select class="price"><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="chilly@.jpg"/><h3>114 - Chilli Chicken</h3><select class="price"><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="chickenkomdattam@.jpg"/><h3>115 - Chicken Kondattam</h3><select class="price"><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="chickencurry@.jpg"/><h3>116 - Chicken Curry</h3><select class="price"><option value="7">7 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="butter@.jpg"/><h3>117 - Butter Chicken</h3><select class="price"><option value="14">14 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="charcoal@.jpg"/><h3>118 - charcoal</h3><select class="price"><option value="12">12 د.إ</option><option value="18">18 د.إ</option><option value="34">34 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-</div>
-<!-- . Veg Curry -->
-<div class="menu-card"><img alt="" src="veg@.jpg"/><h3>119 - Mix Veg Curry</h3><select class="price"><option value="4">4 د.إ</option><option value="6">6 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="kadala@.jpg"/><h3>120 - Kadala Curry</h3><select class="price"><option value="4">4 د.إ</option><option value="6">6 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
+  <div class="menu-card"><img alt="" src="chicken65@.jpg"/><div class="menu-card-content"><h3>113 - Chicken 65</h3>
+    <div class="price-container"><span class="price">10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="chilly@.jpg"/><div class="menu-card-content"><h3>114 - Chilli Chicken</h3>
+    <div class="price-container"><span class="price">10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="chickenkomdattam@.jpg"/><div class="menu-card-content"><h3>115 - Chicken Kondattam</h3>
+    <div class="price-container"><span class="price">12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="chickencurry@.jpg"/><div class="menu-card-content"><h3>116 - Chicken Curry</h3>
+    <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="butter@.jpg"/><div class="menu-card-content"><h3>117 - Butter Chicken</h3>
+    <div class="price-container"><span class="price">14 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="charcoal@.jpg"/><div class="menu-card-content"><h3>118 - Charcoal Grilled Chicken</h3>
+    <div class="price-container"><span class="price">12 د.إ / 18 د.إ / 34 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
-<!-- . Beef -->
+<!-- Veg Curry -->
+<h2>Veg Curry</h2>
+<div class="menu-section">
+  <div class="menu-card"><img alt="" src="veg@.jpg"/><div class="menu-card-content"><h3>119 - Mix Veg Curry</h3>
+    <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="kadala@.jpg"/><div class="menu-card-content"><h3>120 - Kadala Curry</h3>
+    <div class="price-container"><span class="price">4 د.إ / 6 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+</div>
+
+<!-- Beef -->
 <h2>Beef</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="beeffry@.jpg"/><h3>121 - Beef dry fry</h3><select class="price"><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
+  <div class="menu-card"><img alt="" src="beeffry@.jpg"/><div class="menu-card-content"><h3>121 - Beef Dry Fry</h3>
+    <div class="price-container"><span class="price">10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="beefcurry@.jpg"/><div class="menu-card-content"><h3>122 - Beef Curry</h3>
+    <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
-</div>
-<div class="menu-card"><img alt="" src="beefcurry@.jpg"/><h3>122 - Beef Curry</h3><select class="price"><option value="7">7 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-</div>
-<!-- . Fish -->
+
+<!-- Fish -->
 <h2>Fish</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="fish@.jpg"/><h3>123 - Fish Fry</h3><select class="price"><option value="7">7 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
+  <div class="menu-card"><img alt="" src="fish@.jpg"/><div class="menu-card-content"><h3>123 - Fish Fry</h3>
+    <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
-</div>
-</div>
-<!-- . Burgers & Sandwiches -->
+
+<!-- Burgers & Sandwiches -->
 <h2>Burgers &amp; Sandwiches</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="doubleburger@.jpg"/><h3>124 - Double Burger</h3><select class="price"><option value="13">13 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
+  <div class="menu-card"><img alt="" src="doubleburger@.jpg"/><div class="menu-card-content"><h3>124 - Double Burger</h3>
+    <div class="price-container"><span class="price">13 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="burger@.jpg"/><div class="menu-card-content"><h3>125 - Chicken Burger</h3>
+    <div class="price-container"><span class="price">5 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="burgewithpotato@.jpg"/><div class="menu-card-content"><h3>126 - Chicken Burger with French Fries</h3>
+    <div class="price-container"><span class="price">7 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="chickensand@.jpg"/><div class="menu-card-content"><h3>127 - Chicken Sandwich (1 Pcs)</h3>
+    <div class="price-container"><span class="price">5 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="beefsand@.jpg"/><div class="menu-card-content"><h3>128 - Beef Sandwich</h3>
+    <div class="price-container"><span class="price">5 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="porattaeggroll@.jpg"/><div class="menu-card-content"><h3>129 - Poratta Egg Roll</h3>
+    <div class="price-container"><span class="price">4 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="vegclub@.jpg"/><div class="menu-card-content"><h3>130 - Veg Club Sandwich</h3>
+    <div class="price-container"><span class="price">6 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
-</div>
-<div class="menu-card"><img alt="" src="burger@.jpg"/><h3>125 - Chicken Burger</h3><select class="price"><option value="5">5 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="burgewithpotato@.jpg"/><h3>126 - Chicken Burger with French Fries</h3><select class="price"><option value="7">7 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="chickensand@.jpg"/><h3>127 - Chicken Sandwich (1 Pcs)</h3><select class="price"><option value="5">5 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="beefsand@.jpg"/><h3>128 - Beef Sandwich</h3><select class="price"><option value="5">5 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="porattaeggroll@.jpg"/><h3>129 - Poratta egg roll</h3><select class="price"><option value="4">4 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="vegclub@.jpg"/><h3>130 - veg club sandwich</h3><select class="price"><option value="6">6 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-</div>
-<!-- . Juices -->
+
+<!-- Juices -->
 <h2>Juices</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="lassi@.jpg"/><h3>131 - Lassi</h3><select class="price"><option value="5">5 د.إ</option><option value="8">8 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
+  <div class="menu-card"><img alt="" src="lassi@.jpg"/><div class="menu-card-content"><h3>131 - Lassi</h3>
+    <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="apple@.jpg"/><div class="menu-card-content"><h3>132 - Apple</h3>
+    <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="banana@.jpg"/><div class="menu-card-content"><h3>133 - Banana</h3>
+    <div class="price-container"><span class="price">4 د.إ / 6 د.إ / 8 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="strawberry@.jpg"/><div class="menu-card-content"><h3>134 - Strawberry</h3>
+    <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="orange@.jpg"/><div class="menu-card-content"><h3>135 - Orange</h3>
+    <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="mango@.jpg"/><div class="menu-card-content"><h3>136 - Mango</h3>
+    <div class="price-container"><span class="price">5 د.إ / 10 د.إ / 12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="carrot@.jpg"/><div class="menu-card-content"><h3>137 - Carrot</h3>
+    <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="avacado@.jpg"/><div class="menu-card-content"><h3>138 - Avocado</h3>
+    <div class="price-container"><span class="price">6 د.إ / 10 د.إ / 12 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="pineapple@.jpg"/><div class="menu-card-content"><h3>139 - Pineapple</h3>
+    <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="lemon@.jpg"/><div class="menu-card-content"><h3>140 - Sweet Lemon</h3>
+    <div class="price-container"><span class="price">5 د.إ / 8 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="coconut@.jpg"/><div class="menu-card-content"><h3>141 - Coconut</h3>
+    <div class="price-container"><span class="price">10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
-</div>
-<div class="menu-card"><img alt="" src="apple@.jpg"/><h3>132 - Apple</h3><select class="price"><option value="6">6 د.إ</option><option value="10">10 د.إ</option><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="banana@.jpg"/><h3>133 - Banana</h3><select class="price"><option value="4">4 د.إ</option><option value="6">6 د.إ</option><option value="8">8 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="strawberry@.jpg"/><h3>134 - Strawberry</h3><select class="price"><option value="6">6 د.إ</option><option value="10">10 د.إ</option><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="orange@.jpg"/><h3>135 - Orange</h3><select class="price"><option value="6">6 د.إ</option><option value="10">10 د.إ</option><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="mango@.jpg"/><h3>136 - Mango</h3><select class="price"><option value="5">5 د.إ</option><option value="10">10 د.إ</option><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="carrot@.jpg"/><h3>137 - Carrot</h3><select class="price"><option value="5">5 د.إ</option><option value="8">8 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="avacado@.jpg"/><h3>138 - Avocado</h3><select class="price"><option value="6">6 د.إ</option><option value="10">10 د.إ</option><option value="12">12 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="pineapple@.jpg"/><h3>139 - Pineapple</h3><select class="price"><option value="5">5 د.إ</option><option value="8">8 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="lemon@.jpg"/><h3>140 - Sweet Lemon</h3><select class="price"><option value="5">5 د.إ</option><option value="8">8 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="coconut@.jpg"/><h3>141 - Coconut</h3><select class="price"><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-</div>
-<!-- . Tea -->
+
+<!-- Tea -->
 <h2>Tea</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="milktea@.jpg"/><h3>142 - Fresh Tea</h3><select class="price"><option value="2">2 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
+  <div class="menu-card"><img alt="" src="milktea@.jpg"/><div class="menu-card-content"><h3>142 - Fresh Tea</h3>
+    <div class="price-container"><span class="price">2 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="masaltea@.jpg"/><div class="menu-card-content"><h3>143 - Karka Tea</h3>
+    <div class="price-container"><span class="price">1 د.إ / 2 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
-</div>
-<div class="menu-card"><img alt="" src="masaltea@.jpg"/><h3>143 - karka Tea</h3><select class="price"><option value="1">1 د.إ</option><option value="2">2 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-</div>
-<!-- . Al faraha special -->
-<h2>Al faraha special</h2>
+
+<!-- Al faraha special -->
+<h2>Al Faraha Special</h2>
 <div class="menu-section">
-<div class="menu-card"><img alt="" src="avilmilk@.jpg"/><h3>144 - Avil milk</h3><select class="price"><option value="7">7 د.إ</option><option value="10">10 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
-<div class="menu-card"><img alt="" src="special@.jpg"/><h3>145 - Special sandwich</h3><select class="price"><option value="7">7 د.إ</option></select>
-<div class="controls">
-<input class="qty" min="1" type="number" value="1"/>
-<button onclick="addToCart(this)">Add</button>
-</div>
-</div>
+  <div class="menu-card"><img alt="" src="avilmilk@.jpg"/><div class="menu-card-content"><h3>144 - Avil Milk</h3>
+    <div class="price-container"><span class="price">7 د.إ / 10 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
+  <div class="menu-card"><img alt="" src="special@.jpg"/><div class="menu-card-content"><h3>145 - Special Sandwich</h3>
+    <div class="price-container"><span class="price">7 د.إ</span></div>
+    <div class="controls"><input class="qty" min="1" type="number" value="1"/><button onclick="addToCart(this)">➕ Add</button></div>
+  </div></div>
 </div>
 
 <footer>
 <div>📞 <a href="tel:+971508672599">+971 508 67 2599</a></div>
 <div>📧 <a href="mailto:alfarhahotchickenrestaurant9@gmail.com">alfarhahotchickenrestaurant9@gmail.com</a></div>
 <div>📸 <a href="https://instagram.com/alfarharestaurant" target="_blank">Instagram</a>  
-         💬 <a href="https://wa.me/971508672599" target="_blank">Home delivery</a></div>
-         💬 <a href="https://wa.me/971545265499" target="_blank">For complaints click here</a>
-<div>📍 Al Farha Restaurant,Dhadna near health center,UAE </div>
+     💬 <a href="https://wa.me/971508672599" target="_blank">Home delivery</a></div>
+     💬 <a href="https://wa.me/971545265499" target="_blank">For complaints click here</a>
+<div>📍 Al Farha Restaurant, Dhadna near health center, UAE </div>
 <p>© 2025 Al Farha</p>
 </footer>
 
@@ -407,8 +722,8 @@
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 
 <!-- Floating Total, Cart & WhatsApp -->
-<div class="floating-total" id="floatingTotal">0 د.إ</div>
-<button class="floating-cart" onclick="toggleCart()">🛒</button>
+<div class="floating-total" id="floatingTotal">🛒 0 د.إ</div>
+<button class="floating-cart" onclick="toggleCart()">🛒 View Cart</button>
 <button class="floating-wa" onclick="sendWhatsApp()">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"/> Place Order Now
 </button>
@@ -416,8 +731,13 @@
 <!-- Cart Drawer -->
 <div class="cart-drawer" id="cartDrawer">
   <div class="cart-header">Your Order <button class="close-btn" onclick="closeCart()">❌</button></div>
-  <div class="cart-items" id="cartItems"></div>
-  <div class="cart-footer" id="cartTotal">Total: 0 د.إ</div>
+  <div class="cart-items" id="cartItems">
+    <div class="empty-cart">Your cart is empty</div>
+  </div>
+  <div class="cart-footer">
+    <div id="cartTotal">Total: 0 د.إ</div>
+    <button class="checkout-btn" onclick="sendWhatsApp()">Order via WhatsApp</button>
+  </div>
 </div>
 
 <script>
@@ -427,51 +747,121 @@ function addToCart(btn) {
   const card = btn.closest('.menu-card');
   const id = card.querySelector('h3').innerText.split('-')[0].trim();
   const name = card.querySelector('h3').innerText.split('-').slice(1).join('-').trim();
-  const price = parseFloat(card.querySelector('.price').value);
+  const priceText = card.querySelector('.price').innerText;
+  // Extract the first price if multiple options exist
+  const price = parseFloat(priceText.split('د')[0].replace(/[^\d.]/g, '').trim());
   const qty = parseInt(card.querySelector('.qty').value);
-  const existing = cart.find(item => item.id === id && item.price === price);
-  if (existing) { existing.qty += qty; }
-  else { cart.push({id, name, price, qty}); }
+  
+  const existing = cart.find(item => item.id === id && item.name === name);
+  if (existing) { 
+    existing.qty += qty; 
+  } else { 
+    cart.push({id, name, price, qty}); 
+  }
+  
   updateCart();
+  // Show confirmation animation
+  btn.innerHTML = "✅ Added!";
+  setTimeout(() => {
+    btn.innerHTML = "➕ Add";
+  }, 1500);
 }
 
 function updateCart() {
   const cartItems = document.getElementById('cartItems');
+  const cartTotal = document.getElementById('cartTotal');
+  const floatingTotal = document.getElementById('floatingTotal');
+  
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
+    cartTotal.innerHTML = 'Total: 0 د.إ';
+    floatingTotal.innerHTML = '🛒 0 د.إ';
+    return;
+  }
+  
   cartItems.innerHTML = '';
   let total = 0;
+  
   cart.forEach((item, index) => {
     const subtotal = item.price * item.qty;
     total += subtotal;
-    cartItems.innerHTML += `
-      <div class="cart-item">
-        <span>${item.id} - ${item.name} x${item.qty}</span>
-        <span>${subtotal} د.إ <button onclick="removeItem(${index})">❌</button></span>
-      </div>`;
+    
+    const cartItemElement = document.createElement('div');
+    cartItemElement.className = 'cart-item';
+    cartItemElement.innerHTML = `
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.id} - ${item.name}</div>
+        <div class="cart-item-price">${item.price} د.إ each</div>
+      </div>
+      <div class="cart-item-controls">
+        <input type="number" class="cart-item-qty" value="${item.qty}" min="1" 
+               onchange="updateItemQty(${index}, this.value)">
+        <button class="cart-item-remove" onclick="removeItem(${index})">×</button>
+      </div>
+    `;
+    
+    cartItems.appendChild(cartItemElement);
   });
-  document.getElementById('floatingTotal').innerText = total + ' د.إ';
-  document.getElementById('cartTotal').innerText = 'Total: ' + total + ' د.إ';
+  
+  cartTotal.innerHTML = `Total: ${total} د.إ`;
+  floatingTotal.innerHTML = `🛒 ${total} د.إ`;
 }
 
-function removeItem(index) { cart.splice(index, 1); updateCart(); }
+function updateItemQty(index, newQty) {
+  if (newQty < 1) newQty = 1;
+  cart[index].qty = parseInt(newQty);
+  updateCart();
+}
+
+function removeItem(index) { 
+  cart.splice(index, 1); 
+  updateCart(); 
+}
+
 function toggleCart() {
   const drawer = document.getElementById('cartDrawer');
   const overlay = document.getElementById('overlay');
-  if (drawer.style.display === 'block') { closeCart(); }
-  else { drawer.style.display = 'block'; drawer.style.top = '0px'; overlay.style.display = 'block'; }
+  
+  if (cart.length === 0) {
+    alert("Your cart is empty! Add some items first.");
+    return;
+  }
+  
+  drawer.classList.add('open');
+  overlay.style.display = 'block';
 }
+
 function closeCart() {
-  document.getElementById('cartDrawer').style.display = 'none';
-  document.getElementById('cartDrawer').style.top = '-100%';
-  document.getElementById('overlay').style.display = 'none';
+  const drawer = document.getElementById('cartDrawer');
+  const overlay = document.getElementById('overlay');
+  
+  drawer.classList.remove('open');
+  overlay.style.display = 'none';
 }
+
 function sendWhatsApp() {
-  if (cart.length === 0) { alert("Your cart is empty!"); return; }
-  let message = "Order from Al Farha:%0A";
-  cart.forEach(item => { message += `${item.id} - ${item.name} x${item.qty} = ${item.price*item.qty} د.إ%0A`; });
-  let total = cart.reduce((sum, item) => sum + item.price*item.qty, 0);
-  message += `Total: ${total} د.إ`;
+  if (cart.length === 0) { 
+    alert("Your cart is empty! Add some items first."); 
+    closeCart();
+    return; 
+  }
+  
+  let message = "Order from Al Farha:%0A%0A";
+  cart.forEach(item => { 
+    message += `- ${item.id} - ${item.name} x${item.qty} = ${item.price * item.qty} د.إ%0A`; 
+  });
+  
+  let total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  message += `%0ATotal: ${total} د.إ%0A%0ADelivery Address: `;
+  
   window.open("https://wa.me/971508672599?text=" + message, "_blank");
 }
+
+// Close cart when clicking outside
+document.getElementById('overlay').addEventListener('click', closeCart);
+
+// Initialize cart display
+updateCart();
 </script>
 </body>
 </html>
