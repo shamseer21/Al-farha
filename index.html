@@ -24,7 +24,10 @@
     }
     
     body {
-        font-family: 'Poppins', sans-serif;
+       
+        color: #D32F2F;
+        padding: 8px 15px;
+        background: rgba(211, 47, 47, font-family: 'Poppins', sans-serif;
         margin: 0; 
         padding: 0;
         background-color: #FAFAFA; 
@@ -139,10 +142,7 @@
     
     .price {
         font-size: 1.1em;
-        font-weight: 600;
-        color: #D32F2F;
-        padding: 8px 15px;
-        background: rgba(211, 47, 47, 0.1);
+        font-weight: 600; 0.1);
         border-radius: 20px;
         display: inline-block;
         margin-bottom: 10px;
@@ -572,6 +572,92 @@
 
 <!-- Notification Container -->
 <div class="notification-container" id="notificationContainer"></div>
+<!-- Top Menu Tabs -->
+<div style="display:flex; justify-content:center; margin:20px 0;">
+    <button id="normalTab" class="tab-button active" onclick="showMenu('normal')">NORMAL</button>
+    <button id="specialTab" class="tab-button" onclick="showMenu('special')">SPECIAL</button>
+</div>
+
+<style>
+.tab-button {
+    padding: 12px 30px;
+    margin: 0 10px;
+    border: 2px solid #D32F2F;
+    background: white;
+    color: #D32F2F;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+.tab-button.active {
+    background: #D32F2F;
+    color: white;
+}
+.accordion {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.accordion:hover {
+    background: #f7f7f7;
+}
+.accordion::after {
+    content: "▶";
+    margin-left: auto;
+    font-size: 1em;
+    transition: transform 0.3s;
+}
+.accordion.active::after {
+    transform: rotate(90deg);
+}
+.accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    padding-left: 10px;
+}
+</style>
+
+<script>
+function showMenu(type) {
+    document.getElementById("normalMenu").style.display = (type === "normal") ? "block" : "none";
+    document.getElementById("specialMenu").style.display = (type === "special") ? "block" : "none";
+
+    document.getElementById("normalTab").classList.toggle("active", type === "normal");
+    document.getElementById("specialTab").classList.toggle("active", type === "special");
+}
+
+function setupAccordions() {
+    document.querySelectorAll(".accordion").forEach(acc => {
+        acc.addEventListener("click", function () {
+            this.classList.toggle("active");
+            let panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    });
+}
+
+document.addEventListener("DOMContentLoaded", setupAccordions);
+</script>
+
+<!-- MAIN MENU WRAPPERS -->
+<div id="normalMenu" style="display:block;">
+    <!-- NORMAL menu content goes here -->
 
 <!-- ✅ FULL MENU START -->
 <!-- Dosa Items Section -->
@@ -1326,6 +1412,11 @@
             </div>
         </div>
     </div>
+</div> <!-- END NORMAL -->
+
+<div id="specialMenu" style="display:none;">
+    <!-- SPECIAL menu content goes here -->
+</div> <!-- END SPECIAL -->
 
     <footer>
 <div>📞 <a href="tel:+971508672599">+971 508 67 2599</a></div>
